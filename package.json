@@ -17,6 +17,7 @@
     "@mui/material": "^5.11.1",
     "apollo-link-context": "^1.0.20",
     "aws-appsync-auth-link": "^3.0.7",
+    "build": "^0.1.4",
     "dotenv": "^16.0.3",
     "formik": "^2.2.9",
     "framer-motion": "^9.0.2",
