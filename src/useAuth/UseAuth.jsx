@@ -1,7 +1,6 @@
 
 import React , { useState } from "react";
 import { useApolloClient, useMutation } from "@apollo/client";
-import { getTypenameFromResult } from "@apollo/client/utilities";
 import { LOGIN_USER } from "../graphql/mutation";
 import { useNavigate } from "react-router-dom";
 
