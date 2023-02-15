@@ -1,0 +1,123 @@
+.div-footer {
+   height: 100%;
+}
+.footerPadre {
+    font-family: 'monospace';
+    padding: 50px;
+    height: 100%;
+    background-color: #212121;
+    color: rgb(255, 255, 255);
+    border-radius: 2px;
+   
+    
+
+}
+
+.footerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: flex-end;
+    font-size: small;
+    padding: 40px;
+}
+
+.footerAbout span {
+ padding: 10px;   
+}
+
+.footerSocialRed {
+ display: flex;
+ justify-content: flex-end;
+}
+
+.divSocialRed {
+    color: rgb(189, 189, 189);
+    padding: 10px;
+  
+}
+
+.divTerms {
+    padding: 10;
+    color: gray;
+    display: flex;
+    justify-content: space-between;
+}
+
+.divTitle{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.divSubTitle {
+    display: flex; 
+    justify-content: flex-end;
+}
+
+
+@media only screen and (max-width: 706px) {
+    .footerRegister {
+     padding: 8px;
+    }
+
+    .footerRegister h4 {
+        margin: 4px;
+        font-size: large;
+    }
+
+    .footerAbout {
+        padding: 8px;
+    }
+    .footerAbout h4{
+        margin: 4px;
+        font-size: large;
+    }
+    .footerAbout span {
+        margin: 4px;
+        font-size: large;
+    }
+    .footerContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       
+        
+    }
+    .footerSocialRed {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 444px) {
+ 
+    .footerContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       
+        
+    }
+    .footerSocialRed {
+        display: flex;
+        justify-content: center;
+    }
+
+    .divTerms {
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+    }
+    .divTitle {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .divTitle  span{
+        margin-right: 40px;
+    }
+    .divSubTitle {
+        display: flex;
+        flex-direction: column;
+    }
+}

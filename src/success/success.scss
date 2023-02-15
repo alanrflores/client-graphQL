@@ -1,0 +1,18 @@
+.container-success {
+    margin-top: 100px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .success-id {
+        h2 {
+            padding: 6px;
+        }
+
+        h3 {
+            padding: 10px;
+            margin: 6px;
+        }
+    }    
+}

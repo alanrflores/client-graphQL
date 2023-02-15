@@ -1,0 +1,105 @@
+.container-product-detail {
+  margin-top: 60px;
+  height: 100%;
+  .swiper-product {
+    background-image: 
+    url("https://www.jordan.com/collection/content/dam/jordan/air-jordan-collection/images/bgplates/c-bg.jpg");
+   
+    .btn-buy {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    img {
+        width: 520px;
+        height: 300px;
+    }
+  }
+
+  .div-container-title {
+    padding: 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    h2 {
+      letter-spacing: 4px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .div-description {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      span {
+        color: gray;
+        font-weight: bold;
+        padding: 6px;
+        margin-top: 4px;
+      }
+      label {
+        font-weight: bold;
+      }
+      p {
+        color: gray;
+        font-weight: bold;
+        padding: 6px;
+        margin-top: 4px;
+        width: 310px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 763px){
+    
+    .container-product-detail {
+    .product-images-slider {
+    .swiper-product {
+        img {
+            width: 280px;
+            height: 180px;
+
+        }
+    }
+
+    }
+    .div-container-title {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        h2 {
+            font-size: small;
+            padding: 10px;
+            
+            
+        }
+        .div-description {
+            padding: 10px;
+            label {
+                font-size: small;
+                margin-top: 10px;
+            }
+         
+            
+        }
+    }
+    }
+}
+
+@media only screen and (max-width: 360px){
+    .container-product-detail {
+        .product-images-slider {
+        .swiper-product {
+            img {
+                width: 220px;
+                height: 140px;
+    
+            }
+        }
+    
+        }
+    }
+
+}
