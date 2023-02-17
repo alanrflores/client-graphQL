@@ -62,6 +62,15 @@ mutation($updateProductStockId: ID!, $stock: String){
 }
 `
 
+export const UPDATE_ROLE_USER = gql`
+mutation($updateRoleId: ID!, $role: Role) {
+  updateRole(id: $updateRoleId, role: $role) {
+    id
+    role
+  }
+}
+`
+
 
 export const REGISTER_USER = gql`
 mutation($registerInput: RegisterInput, $role: Role){
