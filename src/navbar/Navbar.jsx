@@ -97,76 +97,83 @@ function Navbar() {
   };
   const settings = [
       <>
-        <Button
-          sx={{
-            borderRadius: 3,
-            border: 0,
-            color: "black",
-            fontSize: 14,
-            marginLeft: 1,
-          }}
-          onClick={handleClickOpen}
-        >
-          Ajustes
-        </Button>
-        <Dialog
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            flexDirection: "column",
-          }}
-          open={open}
-          onClose={handleClose}
-        >
-          <h1 style={{ color: "gray", padding: 8, fontFamily: "monospace" }}>
-            Actualizar rol de usuario
-          </h1>
-          <DialogContentText sx={{ padding: 4, fontFamily: "monospace" }}>
-            Por favor ingrese sus datos aquí.
-          </DialogContentText>
-          <form
-            style={{ display: "flex", justifyContent: "center" }}
-            onSubmit={handleSubmit}
+       {
+        isAuthenticated?.loginUser?.role === 'ADMIN' && (
+        <>
+          <Button
+            sx={{
+              borderRadius: 3,
+              border: 0,
+              color: "black",
+              fontSize: 14,
+              marginLeft: 1,
+            }}
+            onClick={handleClickOpen}
           >
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <input
-                style={{
-                  padding: 8,
-                  width: 180,
-                  borderRadius: 8,
-                  border: 0,
-                  backgroundColor: "aliceblue",
-                  marginTop: 10,
-                }}
-                type="role"
-                placeholder="Ingrese su rol"
-                value={role}
-                onChange={(e) => setRole(e.target.value)}
-              />
-              <br />
-              <div style={{ padding: 8, marginBottom: 6 }}>
-                <button
+            Ajustes
+          </Button>
+          <Dialog
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              flexDirection: "column",
+            }}
+            open={open}
+            onClose={handleClose}
+          >
+            <h1 style={{ color: "gray", padding: 8, fontFamily: "monospace" }}>
+              Actualizar rol de usuario
+            </h1>
+            <DialogContentText sx={{ padding: 4, fontFamily: "monospace" }}>
+              Por favor ingrese sus datos aquí.
+            </DialogContentText>
+            <form
+              style={{ display: "flex", justifyContent: "center" }}
+              onSubmit={handleSubmit}
+            >
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <input
                   style={{
-                    borderRadius: 4,
                     padding: 8,
+                    width: 180,
+                    borderRadius: 8,
                     border: 0,
-                    marginTop: 4,
-                    fontFamily: "monospace",
-                    color: "white",
-                    backgroundColor: "black",
+                    backgroundColor: "aliceblue",
+                    marginTop: 10,
                   }}
-                  onClick={handleClose}
-                >
-                  Actualizar
-                </button>
+                  type="role"
+                  placeholder="Ingrese su rol"
+                  value={role}
+                  onChange={(e) => setRole(e.target.value)}
+                />
+                <br />
+                <div style={{ padding: 8, marginBottom: 6 }}>
+                  <button
+                    style={{
+                      borderRadius: 4,
+                      padding: 8,
+                      border: 0,
+                      marginTop: 4,
+                      fontFamily: "monospace",
+                      color: "white",
+                      backgroundColor: "black",
+                    }}
+                    onClick={handleClose}
+                  >
+                    Actualizar
+                  </button>
+                </div>
               </div>
-            </div>
-            <Toaster />
-          </form>
-        </Dialog>
-        <Toaster />
+              <Toaster />
+            </form>
+          </Dialog>
+          <Toaster />
+          </>
+        ) 
+       }
       </>,
-    "CERRAR SESIÓN",
+      "CERRAR SESIÓN"
+    
     
   ];
 
@@ -196,6 +203,7 @@ function Navbar() {
       },
     },
   });
+
 
   return (
     <ThemeProvider theme={darkTheme}>
@@ -353,7 +361,7 @@ function Navbar() {
                 onClose={() => setAnchorElUser(null)}
               >
                 {settings.map((setting) => (
-                  // console.log(setting === 'Cerrar sesión')
+                   //console.log(setting)
                   <MenuItem
                     key={setting}
                     onClick={
