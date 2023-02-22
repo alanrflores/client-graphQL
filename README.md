@@ -1,6 +1,5 @@
-# client-graphQL
+# Deploy-client-graphQL
 
-<h1>DEPLOY VERCEL</h1>
 <h1>👟</h1>
  <h1>E-commerce demo de venta de zapatillas</h1> 
 <p>Este proyecto es una demo de un e-commerce de venta de zapatillas, construido con el objetivo de demostrar cómo se puede implementar un sitio web de compras en línea con características y funcionalidades comunes en una aplicación de este tipo. </p>
